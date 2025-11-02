@@ -8,6 +8,8 @@ function generateJoke(){
         if(this.readyState===4 && this.status===200){
             const joke=JSON.parse(this.responseText).value;
              jokEle.innerHTML=joke;
+    }else{
+        jokEle.innerHTML='Something went wrong';
     }
  
 }
